@@ -1,0 +1,718 @@
+{
+  "Type": "WeatherPresetDataAsset",
+  "Name": "DA_LightRainyPreset",
+  "Class": "UScriptClass'WeatherPresetDataAsset'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "WeatherState": {
+      "SkySphere": {
+        "AtmosphereBrightness": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyAtmosphereBrightness'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyAtmosphereBrightness.0"
+          }
+        },
+        "EmissiveBrightness": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyEmissiveBrightness'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyEmissiveBrightness.0"
+          }
+        },
+        "ZenithColor": {
+          "Curve": {
+            "ObjectName": "CurveLinearColor'LightRainyZenithColor'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyZenithColor.0"
+          }
+        },
+        "HorizonColor": {
+          "Curve": {
+            "ObjectName": "CurveLinearColor'LightRainyHorizonColor'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyHorizonColor.0"
+          }
+        }
+      },
+      "DirLight": {
+        "Light": {
+          "Intensity": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyIntensity'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyIntensity.0"
+            }
+          },
+          "LightColor": {
+            "Curve": {
+              "ObjectName": "CurveLinearColor'LightRainyLightColor'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyLightColor.0"
+            }
+          },
+          "Temperature": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyTemperature'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyTemperature.0"
+            }
+          },
+          "ShadowAmount": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyShadowAmount'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyShadowAmount.0"
+            }
+          },
+          "MoonOpacity": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyMoonOpacity'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyMoonOpacity.0"
+            }
+          },
+          "CloudScatteredLuminanceScale": {
+            "Curve": {
+              "ObjectName": "CurveLinearColor'LightRainyCloudScatteredLuminanceScale'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyCloudScatteredLuminanceScale.0"
+            }
+          },
+          "SunDiskColorScale": {
+            "Curve": {
+              "ObjectName": "CurveLinearColor'LightRainySunDiskColorScale'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainySunDiskColorScale.0"
+            }
+          },
+          "VolumetricScatteringIntensity": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyVolumetricScatteringIntensity'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyVolumetricScatteringIntensity.0"
+            }
+          }
+        },
+        "LightShafts": {
+          "BloomTint": {
+            "Curve": {
+              "ObjectName": "CurveLinearColor'LightRainyBloomTint'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyBloomTint.0"
+            }
+          }
+        }
+      },
+      "SkyLight": {
+        "Intensity": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainySkyLightIntensity'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainySkyLightIntensity.0"
+          }
+        },
+        "SkyLightColor": {
+          "Curve": {
+            "ObjectName": "CurveLinearColor'LightRainySkyLightColor'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainySkyLightColor.0"
+          }
+        }
+      },
+      "SkyAtmosphere": {
+        "Base": {
+          "MultiScattering": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyMultiScattering'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyMultiScattering.0"
+            }
+          },
+          "AbsorptionScale": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyAbsorptionScale'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyAbsorptionScale.0"
+            },
+            "TransitionOverrides": [
+              {
+                "Key": "EWeather::Cloudy",
+                "Value": {
+                  "StartOffset": 0.0,
+                  "Duration": 20.0
+                }
+              }
+            ]
+          },
+          "Absorption": {
+            "Curve": {
+              "ObjectName": "CurveLinearColor'LightRainyAbsorption'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyAbsorption.0"
+            },
+            "TransitionOverrides": [
+              {
+                "Key": "EWeather::Stormy",
+                "Value": {
+                  "StartOffset": 0.0,
+                  "Duration": 5.0
+                }
+              }
+            ]
+          },
+          "SkyLuminanceFactor": {
+            "Curve": {
+              "ObjectName": "CurveLinearColor'LightRainySkyLuminanceFactor'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainySkyLuminanceFactor.0"
+            }
+          },
+          "AerialPerspectiveDistanceScale": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyAerialPerspectiveDistanceScale'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyAerialPerspectiveDistanceScale.0"
+            }
+          },
+          "HeightFogContribution": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyHeightFogContribution'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyHeightFogContribution.0"
+            }
+          },
+          "ColorPower": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyColorPower'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyColorPower.0"
+            }
+          }
+        },
+        "RayleighMie": {
+          "RayleighScatteringScale": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyRayleighScatteringScale'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyRayleighScatteringScale.0"
+            }
+          },
+          "RayleighScattering": {
+            "Curve": {
+              "ObjectName": "CurveLinearColor'LightRainyRayleighScattering'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyRayleighScattering.0"
+            }
+          },
+          "RayleighExponentialDistribution": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyRayleighExponentialDistribution'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyRayleighExponentialDistribution.0"
+            }
+          },
+          "MieScatteringScale": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyMieScatteringScale'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyMieScatteringScale.0"
+            },
+            "TransitionOverrides": [
+              {
+                "Key": "EWeather::Cloudy",
+                "Value": {
+                  "StartOffset": 0.0,
+                  "Duration": 20.0
+                }
+              }
+            ]
+          },
+          "MieScattering": {
+            "Curve": {
+              "ObjectName": "CurveLinearColor'LightRainyMieScattering'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyMieScattering.0"
+            }
+          },
+          "MieScatteringAbsorption": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyMieScatteringAbsorption'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyMieScatteringAbsorption.0"
+            }
+          },
+          "MieAbsorption": {
+            "Curve": {
+              "ObjectName": "CurveLinearColor'LightRainyMieAbsorption'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyMieAbsorption.0"
+            }
+          },
+          "MieAnisotropy": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyMieAnisotropy'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyMieAnisotropy.0"
+            }
+          },
+          "MieExponentialDistribution": {
+            "Curve": {
+              "ObjectName": "CurveFloat'LightRainyMieExponentialDistribution'",
+              "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyMieExponentialDistribution.0"
+            }
+          }
+        }
+      },
+      "VolumetricCloud": {
+        "CloudMapBias": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyCloudMapBias'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyCloudMapBias.0"
+          }
+        },
+        "CloudMapDensity": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyCloudMapDensity'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyCloudMapDensity.0"
+          }
+        },
+        "NoiseFlowMapAMultiplier": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyNoiseFlowMapAMultiplier'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyNoiseFlowMapAMultiplier.0"
+          }
+        },
+        "NoiseFlowMapABias": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyNoiseFlowMapABias'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyNoiseFlowMapABias.0"
+          }
+        },
+        "NoiseFlowMapADetail": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyNoiseFlowMapADetail'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyNoiseFlowMapADetail.0"
+          }
+        },
+        "NoiseFlowMapABottomNoise": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyNoiseFlowMapABottomNoise'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyNoiseFlowMapABottomNoise.0"
+          }
+        },
+        "NoiseFlowMapBBias": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyNoiseFlowMapBBias'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyNoiseFlowMapBBias.0"
+          }
+        },
+        "NoiseFlowMapBDetail": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyNoiseFlowMapBDetail'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyNoiseFlowMapBDetail.0"
+          }
+        },
+        "NoiseFlowMapBScale": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyNoiseFlowMapBScale'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyNoiseFlowMapBScale.0"
+          }
+        },
+        "BillowyStormyCloudsHeight": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyBillowyStormyCloudsHeight'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyBillowyStormyCloudsHeight.0"
+          }
+        },
+        "DensityVariationScale": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyDensityVariationScale'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyDensityVariationScale.0"
+          }
+        },
+        "DensityVariationPower": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyDensityVariationPower'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyDensityVariationPower.0"
+          }
+        },
+        "DensityVariationOutFirst": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyDensityVariationOutFirst'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyDensityVariationOutFirst.0"
+          }
+        },
+        "DensityVariationOutSecond": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyDensityVariationOutSecond'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyDensityVariationOutSecond.0"
+          }
+        },
+        "DensityVariationDarkMinDensity": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyDensityVariationDarkMinDensity'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyDensityVariationDarkMinDensity.0"
+          }
+        },
+        "CloudBaseCapMaskRadius": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyCloudBaseCapMaskRadius'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyCloudBaseCapMaskRadius.0"
+          }
+        },
+        "CloudBaseSpeedMultiplier": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyCloudBaseSpeedMultiplier'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyCloudBaseSpeedMultiplier.0"
+          }
+        },
+        "CloudBaseECX": {
+          "Curve": {
+            "ObjectName": "CurveLinearColor'LightRainyCloudBaseECX'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyCloudBaseECX.0"
+          }
+        },
+        "CloudBasePreExponentialDensity": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyCloudBasePreExponentialDensity'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyCloudBasePreExponentialDensity.0"
+          }
+        },
+        "CloudBaseAlbedo": {
+          "Curve": {
+            "ObjectName": "CurveLinearColor'LightRainyCloudBaseAlbedo'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyCloudBaseAlbedo.0"
+          }
+        },
+        "CloudBaseSecondAlbedo": {
+          "Curve": {
+            "ObjectName": "CurveLinearColor'LightRainyCloudBaseSecondAlbedo'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyCloudBaseSecondAlbedo.0"
+          }
+        },
+        "EmissionParamPositionIntensity": {
+          "Curve": {
+            "ObjectName": "CurveLinearColor'LightRainyEmissionParamPositionIntensity'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyEmissionParamPositionIntensity.0"
+          }
+        },
+        "EmissionParamColor": {
+          "Curve": {
+            "ObjectName": "CurveLinearColor'LightRainyEmissionParamColor'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyEmissionParamColor.0"
+          }
+        },
+        "PhaseBlend": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyPhaseBlend'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyPhaseBlend.0"
+          }
+        },
+        "PhaseG": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyPhaseG'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyPhaseG.0"
+          }
+        },
+        "PhaseGSecond": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyPhaseGSecond'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyPhaseGSecond.0"
+          }
+        },
+        "MultiScatteringContribution": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyMultiScatteringContribution'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyMultiScatteringContribution.0"
+          }
+        },
+        "MultiScatteringOcclusion": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyMultiScatteringOcclusion'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyMultiScatteringOcclusion.0"
+          }
+        },
+        "MultiScatteringOcclusionPower": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyMultiScatteringOcclusionPower'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyMultiScatteringOcclusionPower.0"
+          }
+        },
+        "MultiScatteringEccentricity": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyMultiScatteringEccentricity'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyMultiScatteringEccentricity.0"
+          }
+        },
+        "LayerHeight": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyLayerHeight'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyLayerHeight.0"
+          }
+        },
+        "LayerBottomAltitude": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyLayerBottomAltitude'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyLayerBottomAltitude.0"
+          }
+        }
+      },
+      "ExponentialHeightFog": {
+        "FogDensity": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyFogDensity'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyFogDensity.0"
+          }
+        },
+        "FogHeightFalloff": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyFogHeightFalloff'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyFogHeightFalloff.0"
+          }
+        },
+        "SecondFogDensity": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainySecondFogDensity'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainySecondFogDensity.0"
+          }
+        },
+        "SecondFogFalloff": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainySecondFogFalloff'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainySecondFogFalloff.0"
+          }
+        },
+        "SecondFogOffset": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainySecondFogOffset'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainySecondFogOffset.0"
+          }
+        },
+        "ScatteringDistribution": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyScatteringDistribution'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyScatteringDistribution.0"
+          }
+        },
+        "Albedo": {
+          "Curve": {
+            "ObjectName": "CurveLinearColor'LightRainyAlbedo'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyAlbedo.0"
+          }
+        },
+        "Emissive": {
+          "Curve": {
+            "ObjectName": "CurveLinearColor'LightRainyEmissive'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyEmissive.0"
+          }
+        },
+        "ExtinctionScale": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyExtinctionScale'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyExtinctionScale.0"
+          }
+        },
+        "SkyAtmosphereAmbientContributionColorScale": {
+          "Curve": {
+            "ObjectName": "CurveLinearColor'LightRainySkyAtmosphereAmbientContributionColorScale'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainySkyAtmosphereAmbientContributionColorScale.0"
+          }
+        },
+        "DirectionalInscatteringColor": {
+          "Curve": {
+            "ObjectName": "CurveLinearColor'LightRainyDirectionalInscatteringColor'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyDirectionalInscatteringColor.0"
+          }
+        },
+        "DirectionalInscatteringExponent": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyDirectionalInscatteringExponent'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyDirectionalInscatteringExponent.0"
+          }
+        }
+      },
+      "GlobalVolumetricValue": {
+        "Curve": {
+          "ObjectName": "CurveFloat'LightRainyGlobalVolumetricValue'",
+          "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyGlobalVolumetricValue.0"
+        }
+      },
+      "LocalVolumetricValue": {
+        "Curve": {
+          "ObjectName": "CurveFloat'LightRainyLocalVolumetricValue'",
+          "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyLocalVolumetricValue.0"
+        }
+      },
+      "Rain": {
+        "Intensity": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyRainSpawnRate'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyRainSpawnRate.0"
+          },
+          "TransitionOverrides": [
+            {
+              "Key": "EWeather::Cloudy",
+              "Value": {
+                "StartOffset": 0.0,
+                "Duration": 60.0
+              }
+            },
+            {
+              "Key": "EWeather::Stormy",
+              "Value": {
+                "StartOffset": 0.0,
+                "Duration": 15.0
+              }
+            },
+            {
+              "Key": "EWeather::CalmBeforeEmission",
+              "Value": {
+                "StartOffset": 0.0,
+                "Duration": 15.0
+              }
+            }
+          ]
+        },
+        "WeatherLightningSpawnRate": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyWeatherLightningSpawnRate'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyWeatherLightningSpawnRate.0"
+          },
+          "TransitionOverrides": [
+            {
+              "Key": "EWeather::Stormy",
+              "Value": {
+                "StartOffset": 15.0,
+                "Duration": 15.0
+              }
+            },
+            {
+              "Key": "EWeather::CalmBeforeEmission",
+              "Value": {
+                "StartOffset": 15.0,
+                "Duration": 15.0
+              }
+            }
+          ]
+        },
+        "Wetness": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyWetness'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyWetness.0"
+          },
+          "TransitionOverrides": [
+            {
+              "Key": "EWeather::Cloudy",
+              "Value": {
+                "StartOffset": 0.0,
+                "Duration": 120.0
+              }
+            },
+            {
+              "Key": "EWeather::Clearly",
+              "Value": {
+                "StartOffset": 0.0,
+                "Duration": 70.0
+              }
+            }
+          ]
+        },
+        "Drying": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyDrying'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyDrying.0"
+          }
+        },
+        "MaxWetnessValue": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyMaxWetnessValue'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyMaxWetnessValue.0"
+          }
+        },
+        "LightningColor": {
+          "Curve": {
+            "ObjectName": "CurveLinearColor'LightRainyLightningColor'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyLightningColor.0"
+          }
+        }
+      },
+      "PostProcess": {
+        "DiffuseColorBoost": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainyDiffuseColorBoost'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyDiffuseColorBoost.0"
+          }
+        },
+        "SkylightLeaking": {
+          "Curve": {
+            "ObjectName": "CurveFloat'LightRainySkylightLeaking'",
+            "ObjectPath": "/Game/light/Curves/LightRainy/LightRainySkylightLeaking.0"
+          }
+        }
+      },
+      "WindIntensity": {
+        "Curve": {
+          "ObjectName": "CurveFloat'LightRainyWindIntensity'",
+          "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyWindIntensity.0"
+        }
+      },
+      "WaterWindNormalMultiplier": {
+        "Curve": {
+          "ObjectName": "CurveFloat'LightRainyWaterWindNormalMultiplier'",
+          "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyWaterWindNormalMultiplier.0"
+        }
+      },
+      "WaterWindBaseSpeedMultiplier": {
+        "Curve": {
+          "ObjectName": "CurveFloat'LightRainyWaterWindBaseSpeedMultiplier'",
+          "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyWaterWindBaseSpeedMultiplier.0"
+        }
+      },
+      "FoliageAnimationSpeed": {
+        "Curve": {
+          "ObjectName": "CurveFloat'LightRainyFoliageAnimationSpeed'",
+          "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyFoliageAnimationSpeed.0"
+        }
+      },
+      "FoliageWindIntensityAmplitude": {
+        "Curve": {
+          "ObjectName": "CurveFloat'LightRainyFoliageWindIntensityAmplitude'",
+          "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyFoliageWindIntensityAmplitude.0"
+        }
+      },
+      "FoliageRotationAmount": {
+        "Curve": {
+          "ObjectName": "CurveFloat'LightRainyFoliageRotationAmount'",
+          "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyFoliageRotationAmount.0"
+        }
+      },
+      "FoliageRotationSpeedFraction": {
+        "Curve": {
+          "ObjectName": "CurveFloat'LightRainyFoliageRotationSpeedFraction'",
+          "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyFoliageRotationSpeedFraction.0"
+        }
+      },
+      "FoliageVariationSpeedFraction": {
+        "Curve": {
+          "ObjectName": "CurveFloat'LightRainyFoliageVariationSpeedFraction'",
+          "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyFoliageVariationSpeedFraction.0"
+        }
+      },
+      "FoliageVariationAmount": {
+        "Curve": {
+          "ObjectName": "CurveFloat'LightRainyFoliageVariationAmount'",
+          "ObjectPath": "/Game/light/Curves/LightRainy/LightRainyFoliageVariationAmount.0"
+        }
+      },
+      "TransitionDurations": [
+        {
+          "Key": "EWeather::Clearly",
+          "Value": 70.0
+        },
+        {
+          "Key": "EWeather::Cloudy",
+          "Value": 120.0
+        },
+        {
+          "Key": "EWeather::Fogy",
+          "Value": 0.01
+        },
+        {
+          "Key": "EWeather::Stormy",
+          "Value": 30.0
+        },
+        {
+          "Key": "EWeather::Rainy",
+          "Value": 45.0
+        },
+        {
+          "Key": "EWeather::Thundery",
+          "Value": 30.0
+        },
+        {
+          "Key": "EWeather::Emission",
+          "Value": 30.0
+        },
+        {
+          "Key": "EWeather::CalmBeforeEmission",
+          "Value": 30.0
+        },
+        {
+          "Key": "EWeather::EWeather_MAX",
+          "Value": 0.05
+        }
+      ]
+    }
+  }
+}
